@@ -1,13 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Profile from "./LoginForm/Profile";
+import React from "react";
+
+import "./App.css";
+// import Profile from "./LoginForm/Profile";
+import About from "./Router/About";
+import Contact from "./Router/Contact";
+import Home from "./Router/Home";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Profile/>
-    </div>
+    <Router>
+      <div className="App">
+        {/* <Profile/> */}
+        <About />
+        <Contact />
+        <Home />
+      </div>
+    </Router>
   );
 }
 
